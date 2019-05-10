@@ -8,4 +8,5 @@ CMD echo "now running ..."
 # apache
 RUN apt-get update && apt-get install -y wget
 RUN apt-get install -y sysvinit-utils
+RUN apt-get install -y apache2
 
