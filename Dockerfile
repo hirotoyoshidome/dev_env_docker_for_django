@@ -1,4 +1,4 @@
 #FROM centos
-FROM hnakamur/centos 
-RUN /bin/echo hi
-RUN /bin/cat /etc/redhat-release
+FROM centos:centos7
+# Author
+MAINTAINER yoru722

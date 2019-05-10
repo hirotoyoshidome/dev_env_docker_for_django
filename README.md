@@ -21,3 +21,41 @@ $ sudo apt-get -y install docker-ce
 $ sudo pip3 install -U docker-compose
 ```
 
+## 実行
+
+* 起動する
+
+```
+docker images
+docker build .
+```
+
+* 状態をコミットする
+
+```
+docker ps -a
+docker commit {CONTAINER ID}
+```
+
+* イメージを削除する
+
+```
+docker images
+docker rmi {IMAGE ID}
+```
+
+* コンテナの削除
+
+```
+docker ps -a
+docker rm {CONTAINER ID}
+```
+
+* コンソールに入る
+
+```
+docker images
+docker run -i -t -d {IMAGE ID} /bin/bash
+docker attach {RUN ID}
+```
+
