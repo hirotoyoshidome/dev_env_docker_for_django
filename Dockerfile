@@ -1,5 +1,5 @@
 #FROM centos
-FROM centos:centos7
+FROM ubuntu:18.04
 # Author
 MAINTAINER yoru722
 
