@@ -62,6 +62,7 @@ docker rm {CONTAINER ID}
 
 ```
 docker images
+sudo mkdir /work
 docker run -it -d --rm -v /work:/work {IMAGE ID} /bin/bash
 docker attach {RUN ID}
 ```
