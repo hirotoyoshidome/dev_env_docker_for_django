@@ -1,11 +1,18 @@
 # 開発環境をDockerで作成する
 
 ## 想定の環境
-
+### インストール系
 * python3系最新
 * MySQL最新
 * Django最新
-* Apache or Nginx
+* Apache
+### マウントディレクトリ
+* /work
+### ワークディレクトリ
+* /opt
+※上記、現在は仮の設定
+
+# Register your models here.
 
 ## 環境インストール
 
@@ -27,10 +34,10 @@ $ sudo pip3 install -U docker-compose
 
 ```
 docker images
-docker build .
+docker build -t dev .
 ```
 
-* 状態をコミットする
+* 状態をコミットする(起動時に--rmはつけない)
 
 ```
 docker ps -a
@@ -55,7 +62,7 @@ docker rm {CONTAINER ID}
 
 ```
 docker images
-docker run -i -t -d {IMAGE ID} /bin/bash
+docker run -it -d --rm {IMAGE ID} /bin/bash
 docker attach {RUN ID}
 ```
 
