@@ -6,20 +6,20 @@ MAINTAINER yoru722
 CMD echo "now running ..."
 
 # wget
-RUN apt-get update && apt-get install -y wget
+RUN apt update && apt install -y wget
 
 # service
-RUN apt-get install -y sysvinit-utils
+RUN apt install -y sysvinit-utils
 
 # apache
-RUN apt-get install -y apache2
+RUN apt install -y apache2
 
 # mysql
-RUN apt-get install -y mysql-server
+RUN apt install -y mysql-server
 #RUN mysql_secure_installation
 
 # python3(now 3.6.7)
-RUN apt-get install -y python3 python3-pip
+RUN apt install -y python3 python3-pip
 # Django
 RUN pip3 install -U django
 
