@@ -45,3 +45,11 @@ docker run -it dev_container
 ```
 docker run -v $PWD:/work it dev_container
 ```
+
+? 使ったコンテナを削除する
+
+```
+docker run --rm -v $PWD:/work it dev_container
+```
+※--rmをつけないと、runの度にコンテナが残っていきます
+
