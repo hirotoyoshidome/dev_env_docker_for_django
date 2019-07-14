@@ -1,0 +1,25 @@
+version: '3'
+ 
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: test-mysql
+        environment:
+            MYSQL_ROOT_USER: root
+            MYSQL_ROOT_PASSWORD: pass
+            MYSQL_DATABASE: sampledb
+        volumes:
+            - db-volume:/var/lib/mysql
+    nginx:
+        image: nginx
+        container_name: test-nginx
+        ports:
+          - "8080:80"
+    myapp:
+        build: .
+        container_name: myapp
+        volumes:
+          - ./:/work
+      
+volumes:
+  db-volume:
