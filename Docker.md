@@ -53,3 +53,18 @@ docker run --rm -v $PWD:/work it dev_container
 ```
 ※--rmをつけないと、runの度にコンテナが残っていきます
 
+? Docker環境のコンテナにSSHする
+
+```
+apt install -y openssh-server
+/etc/init.d/ssh status
+/etc/init.d/ssh start
+```
+上記のパッケージが無いと、SSHできないため（サービスが起動していないため）インストール必須
+
+```
+ssh-keygen -t rsa
+cat id_rsa.pub
+vi authorised_keys
+ssh root@localhost
+```
